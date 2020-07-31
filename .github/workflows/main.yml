@@ -1,0 +1,19 @@
+name: API
+on:
+  push:
+    branches: [master]
+  schedule:
+    - cron: "*/10 * * * *"
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: npm install and test
+        run: npm install
+      - uses: actions/checkout@master
+      - name: Update gist
+        uses: sell/api-stats@master
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIST_ID: 1a4653f4d91691a2e00da20b82684e1a
+          MY_API_KEY: ${{ secrets.API_KEY_HEADER }}
