@@ -11,7 +11,7 @@ const Box = new GistBox({
     try {
         const response = await axios.get(url, {
             headers: {
-                'X-API-KEY': process.env.api_key_header
+                'X-API-KEY': process.env.API_KEY_HEADER
             }
         })
 
