@@ -16,6 +16,7 @@ const Box = new GistBox({
         })
 
         const data = response.data
+        console.log(data) //
 
         await Box.update({
             content: `Total Requests: ${data.requests.toLocaleString()} ✅\nTotal Incorrect Requests: ${data.errors.toLocaleString()} ❌\nStatus: ok✅ \n Timestamp: ${new Date}`,
