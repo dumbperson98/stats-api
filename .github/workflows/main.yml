@@ -19,4 +19,4 @@ jobs:
           GIST_ID: 1a4653f4d91691a2e00da20b82684e1a
           MY_API_KEY: ${{ secrets.API_KEY_HEADER }}
       - run: npm i
-      - run: node index.js
+      - run: node main.js
