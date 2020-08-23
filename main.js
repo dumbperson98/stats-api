@@ -20,7 +20,7 @@ const Box = new GistBox({
         console.log(data)
 
         await Box.update({
-            content: `Bear Requests: ${data.bear_requests.requests} 🐻\nRiddle Requests: ${data.riddle_requests.requests} 🃏\nLyric Requests: ${data.lyric_requests.requests} 🎶\nIncorrect Lyric Requests: ${data.incorrect_lyric_requests.requests} ❌\n Random Facts: ${data.incorrect_lyric_requests.requests}`,
+            content: `Total Requests: ${data.requests.toLocaleString()} ✅\nTotal Incorrect Requests: ${data.errors.toLocaleString()} ❌\nStatus: ok✅ \n Timestamp: ${new Date}`,
             filename: `📊 Api Hits.txt`
         })
     } catch (e) {
